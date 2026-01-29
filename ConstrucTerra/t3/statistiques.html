@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistiques | TERRA-FOUNDATION</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body class="stats-page">
+    <nav>
+        <div class="logo">TERRA-FOUNDATION</div>
+        <div class="nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="statistiques.html" class="active">Statistiques</a>
+            <a href="packs.html">Packs</a>
+            <a href="pourquoi-nous.html">Pourquoi Nous</a>
+            <a href="projets.html">Projets</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <section id="statistiques" class="stats-section" style="min-height: 100vh; background: var(--color-dark);">
+        <div id="particles-js" class="stats-bg"></div>
+        <div style="position: relative; z-index: 2;">
+            <h1 class="section-title" style="color: white; border-color: var(--color-primary); text-align: center;">
+                Chiffres Qui Parlent</h1>
+            <p style="color: white; opacity: 0.8; margin-bottom: 50px; text-align: center;">L'impact révolutionnaire de
+                TERRA-FOUNDATION sur la construction moderne.</p>
+
+            <div class="stats-container">
+                <div class="stat-item">
+                    <h3 class="counter" data-target="2.8">0</h3>
+                    <p>Milliards € économisés annuellement en France</p>
+                    <i class="fas fa-euro-sign fa-3x" style="color: var(--color-primary); margin-top: 20px;"></i>
+                </div>
+                <div class="stat-item">
+                    <h3 class="counter" data-target="1366">0</h3>
+                    <p>ROI moyen de 1 366%</p>
+                    <i class="fas fa-chart-line fa-3x" style="color: var(--color-primary); margin-top: 20px;"></i>
+                </div>
+                <div class="stat-item">
+                    <h3 class="counter" data-target="70">0</h3>
+                    <p>70% de retards évités sur les chantiers</p>
+                    <i class="fas fa-clock fa-3x" style="color: var(--color-primary); margin-top: 20px;"></i>
+                </div>
+                <div class="stat-item">
+                    <h3 class="counter" data-target="40">0</h3>
+                    <p>40% de CO₂ réduit par projet</p>
+                    <i class="fas fa-leaf fa-3x" style="color: var(--color-primary); margin-top: 20px;"></i>
+                </div>
+            </div>
+
+            <div style="margin-top: 80px; text-align: center;">
+                <p style="color: white; font-style: italic; max-width: 600px; margin: 0 auto 30px;">"Ces chiffres ne
+                    sont pas des promesses – ce sont des réalités prouvées."</p>
+                <a href="contact.html" class="cta-button"
+                    style="background: var(--color-primary); color: var(--color-dark);">Demander une Étude d'Impact</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

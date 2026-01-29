@@ -1,0 +1,103 @@
+/* --- TERRA-CUBE Fullscreen Section --- */
+.terracube-fullscreen-section {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: block;
+    /* Changed from flex to eliminate spacing */
+    background-color: #ffffff;
+    padding: 0;
+    /* Ensure no padding */
+    margin: 0;
+    /* Ensure no margin */
+}
+
+/* Full-Screen Image */
+.terracube-fullscreen-image {
+    position: relative;
+    /* Changed from absolute for better flow */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    /* Auto height to maintain aspect ratio */
+    object-fit: cover;
+    /* Cover to fill width */
+    /* Show entire image without cropping */
+    object-position: center;
+    z-index: 1;
+    will-change: transform, opacity;
+    filter: brightness(1) contrast(1.05);
+    display: block;
+}
+
+/* Subtle Overlay for Depth */
+.terracube-fullscreen-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center,
+            rgba(0, 77, 64, 0.1) 0%,
+            rgba(0, 0, 0, 0.3) 100%);
+    z-index: 2;
+    pointer-events: none;
+    mix-blend-mode: multiply;
+}
+
+/* Floating Particles Container */
+.terracube-particles-container {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+/* Individual Particles */
+.terra-particle {
+    position: absolute;
+    background: radial-gradient(circle, rgba(0, 245, 212, 0.8) 0%, rgba(76, 175, 80, 0.4) 100%);
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: terraParticleFloat linear infinite;
+    box-shadow: 0 0 10px rgba(0, 245, 212, 0.5);
+}
+
+@keyframes terraParticleFloat {
+    0% {
+        transform: translateY(0) translateX(0) scale(1);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.8;
+    }
+
+    80% {
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: translateY(-120px) translateX(30px) scale(0.8);
+        opacity: 0;
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .terracube-fullscreen-image {
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .terra-particle {
+        width: 3px !important;
+        height: 3px !important;
+    }
+}
+
+/* Optional: Add a subtle glow effect on hover for interactive feel */
+.terracube-fullscreen-section:hover .terracube-fullscreen-image {
+    filter: brightness(1.05) contrast(1.08);
+    transition: filter 0.5s ease;
+}

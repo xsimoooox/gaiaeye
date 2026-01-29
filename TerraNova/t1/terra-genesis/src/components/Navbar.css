@@ -1,0 +1,307 @@
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px 40px;
+    transition: all 0.3s ease;
+    background: transparent;
+    /* Hidden initially */
+    opacity: 0;
+    transform: translateY(-100%);
+    pointer-events: none;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* ========================================
+   LOGO
+   ======================================== */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+    background: #ffffff;
+    backdrop-filter: none;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    padding: 15px 40px;
+    /* Visible when scrolled */
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.navbar.scrolled .logo img {
+    height: 45px;
+}
+
+.navbar-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+/* TERRA text - White initially, Blue when scrolled */
+.terra-text {
+    color: #ffffff;
+    -webkit-text-fill-color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled .terra-text {
+    background: linear-gradient(135deg, #4a90a4 0%, #2c5f6f 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* NOVA text - White initially, Green when scrolled */
+.nova-text {
+    color: #ffffff;
+    -webkit-text-fill-color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled .nova-text {
+    background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.navbar.scrolled .navbar-title {
+    font-size: 1.5rem;
+}
+
+.navbar.scrolled .navbar-logo {
+    width: 45px;
+    height: 45px;
+}
+
+/* ========================================
+   MOBILE MENU TOGGLE BUTTON
+   ======================================== */
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+    transition: all 0.3s;
+}
+
+.hamburger {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: #ffffff;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.navbar.scrolled .hamburger {
+    background: #333;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 2px;
+    background: #ffffff;
+    transition: all 0.3s;
+}
+
+.navbar.scrolled .hamburger::before,
+.navbar.scrolled .hamburger::after {
+    background: #333;
+}
+
+.hamburger::before {
+    top: -8px;
+}
+
+.hamburger::after {
+    top: 8px;
+}
+
+.hamburger.active {
+    background: transparent;
+}
+
+.hamburger.active::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.hamburger.active::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+/* Responsive - Tablette */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    .navbar.scrolled .logo img {
+        height: 35px;
+    }
+
+    /* Show hamburger menu */
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    /* Mobile menu dropdown */
+    .navbar-links {
+        display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        gap: 0;
+        z-index: 999;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .navbar-links a {
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        color: #333;
+    }
+
+    .navbar-links a:last-child {
+        border-bottom: none;
+    }
+
+    .navbar-links a::after {
+        display: none;
+    }
+
+    .navbar-links a:hover {
+        background: rgba(76, 175, 80, 0.1);
+    }
+}
+
+/* Responsive - Mobile */
+@media (max-width: 480px) {
+    .logo img {
+        height: 30px;
+    }
+
+    .navbar.scrolled .logo img {
+        height: 28px;
+    }
+
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    .navbar-links {
+        top: 60px;
+    }
+
+    .navbar-links a {
+        font-size: 13px;
+        padding: 12px;
+    }
+}
+
+/* Navigation Links */
+.navbar-links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-link {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #4caf50;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: #4caf50;
+}
+
+/* Scrolled state for links */
+.navbar.scrolled .nav-link {
+    color: #333;
+}
+
+.navbar.scrolled .nav-link:hover {
+    color: #2e7d32;
+}
+
+.navbar.scrolled .navbar-container {
+    padding-top: 0;
+    /* Adjust if needed */
+}
+
+@media (max-width: 1024px) {
+    .navbar-links {
+        display: none;
+    }
+}

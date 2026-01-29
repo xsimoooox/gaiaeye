@@ -1,0 +1,579 @@
+/* ===================================================
+   STRUCTURE DE DÉPLOIEMENT - Dashboard Satellite Design
+   =================================================== */
+
+/* --- Section Container --- */
+.dashboard-packs-section {
+    background: linear-gradient(180deg, #FFFFFF 0%, #F0FDF4 100%);
+    position: relative;
+    padding: 150px 0;
+    overflow: hidden;
+    min-height: auto;
+}
+
+.dashboard-packs-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--color-dark, #064E3B);
+}
+
+.dashboard-packs-section h2 span {
+    background: linear-gradient(135deg, #10B981 0%, #064E3B 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.dashboard-packs-section .intro-text {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px;
+    font-size: 1.1rem;
+    color: var(--color-dark, #064E3B);
+    opacity: 0.7;
+    line-height: 1.6;
+}
+
+/* --- Background Effects --- */
+.dashboard-bg-effects {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+/* Grille 3D animée */
+.light-animated-grid {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    left: -50%;
+    top: -50%;
+    background-image:
+        linear-gradient(rgba(110, 231, 183, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(110, 231, 183, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    transform: perspective(500px) rotateX(60deg) translateY(-50%);
+    animation: gridMove3D 20s linear infinite;
+}
+
+@keyframes gridMove3D {
+    0% {
+        transform: perspective(500px) rotateX(60deg) translateY(-50%) translateZ(0);
+    }
+
+    100% {
+        transform: perspective(500px) rotateX(60deg) translateY(-50%) translateZ(50px);
+    }
+}
+
+/* Vagues de données */
+.data-wave {
+    position: absolute;
+    width: 200%;
+    height: 200px;
+    background: linear-gradient(transparent, rgba(16, 185, 129, 0.05), transparent);
+    animation: waveFlow 10s ease-in-out infinite;
+}
+
+.wave-1 {
+    top: 20%;
+    animation-delay: 0s;
+}
+
+.wave-2 {
+    bottom: 20%;
+    animation-delay: -5s;
+}
+
+@keyframes waveFlow {
+
+    0%,
+    100% {
+        transform: translateX(-100%) skewX(-15deg);
+    }
+
+    50% {
+        transform: translateX(100%) skewX(-15deg);
+    }
+}
+
+/* --- Carousel Structure --- */
+.packs-viewport {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 40px 0;
+}
+
+.packs-container {
+    display: flex;
+    gap: 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    min-height: 650px;
+    position: relative;
+}
+
+/* --- Dashboard Cards --- */
+.dashboard-card {
+    min-width: 350px;
+    width: 350px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 28px;
+    border: 1px solid rgba(110, 231, 183, 0.3);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.85);
+    opacity: 0.5;
+    filter: blur(2px);
+    z-index: 1;
+    cursor: pointer;
+}
+
+.dashboard-card.hidden-card {
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.7);
+}
+
+/* État actif */
+.dashboard-card.active {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 1;
+    filter: blur(0);
+    z-index: 10;
+    box-shadow: 0 30px 60px rgba(16, 185, 129, 0.15);
+    border: 1px solid rgba(16, 185, 129, 0.4);
+    cursor: default;
+}
+
+.dashboard-card.active:hover {
+    box-shadow: 0 40px 80px rgba(110, 231, 183, 0.3);
+    transform: translate(-50%, -50%) scale(1.12) translateY(-10px);
+}
+
+/* État précédent */
+.dashboard-card.prev {
+    transform: translate(-50%, -50%) scale(0.85) translateX(-250px) rotateY(15deg);
+    opacity: 0.6;
+    z-index: 5;
+    filter: blur(0);
+}
+
+/* État suivant */
+.dashboard-card.next {
+    transform: translate(-50%, -50%) scale(0.85) translateX(250px) rotateY(-15deg);
+    opacity: 0.6;
+    z-index: 5;
+    filter: blur(0);
+}
+
+/* --- Card Header --- */
+.card-header-gradient {
+    padding: 30px;
+    border-bottom: 1px solid rgba(110, 231, 183, 0.2);
+    background: linear-gradient(135deg, rgba(110, 231, 183, 0.2) 0%, transparent 100%);
+    border-radius: 28px 28px 0 0;
+    position: relative;
+}
+
+.card-header-gradient.premium {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, transparent 100%);
+}
+
+/* Status Indicator */
+.status-indicator {
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #10B981;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 5px rgba(110, 231, 183, 0.5);
+    text-transform: uppercase;
+}
+
+.status-indicator.live::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: #FF4D4D;
+    border-radius: 50%;
+    display: inline-block;
+    animation: livePulse 1.5s ease-in-out infinite;
+}
+
+@keyframes livePulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+/* Tag Premium */
+.tag-premium {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: #6EE7B7;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Card Title */
+.dashboard-card h3 {
+    font-size: 24px;
+    margin: 0;
+    color: var(--color-dark, #064E3B);
+    text-shadow: 0 0 10px rgba(110, 231, 183, 0.4);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+}
+
+/* --- Card Body --- */
+.card-body {
+    padding: 40px;
+}
+
+/* Price Display */
+.price-display {
+    margin-bottom: 25px;
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+}
+
+.price-display .currency {
+    font-size: 24px;
+    font-weight: 700;
+    color: #6EE7B7;
+}
+
+.price-display .amount {
+    font-size: 56px;
+    font-weight: 900;
+    color: var(--color-dark, #064E3B);
+    line-height: 1;
+    text-shadow: 0 0 20px rgba(110, 231, 183, 0.5);
+    font-family: 'Outfit', sans-serif;
+}
+
+.price-display .suffix {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-dark, #1D3557);
+    opacity: 0.3;
+}
+
+/* Card Description */
+.card-desc {
+    font-size: 15px;
+    opacity: 0.7;
+    margin-bottom: 30px;
+    min-height: 44px;
+    font-style: italic;
+    color: var(--color-dark, #064E3B);
+    line-height: 1.5;
+}
+
+/* Features List */
+.dashboard-features {
+    list-style: none;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+.dashboard-features li {
+    margin-bottom: 15px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--color-dark, #064E3B);
+}
+
+.dashboard-features .feature-icon {
+    font-size: 18px;
+    width: 24px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+/* --- CTA Button --- */
+.dashboard-cta {
+    display: block;
+    width: 100%;
+    padding: 18px;
+    border-radius: 15px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    background: white;
+    color: #6EE7B7;
+    border: 1px solid #6EE7B7;
+    cursor: pointer;
+    font-family: 'Outfit', sans-serif;
+}
+
+.dashboard-cta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(16, 185, 129, 0.2);
+}
+
+.dashboard-cta.premium {
+    background: linear-gradient(90deg, #10B981, #064E3B);
+    color: white;
+    border: none;
+    box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+    animation: ctaPulse 3s ease-in-out infinite;
+}
+
+.dashboard-cta.premium:hover {
+    box-shadow: 0 15px 35px rgba(6, 78, 59, 0.4);
+    transform: translateY(-5px);
+}
+
+@keyframes ctaPulse {
+
+    0%,
+    100% {
+        box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 10px 30px rgba(110, 231, 183, 0.6);
+    }
+}
+
+/* --- Navigation Arrows --- */
+.slider-arrow {
+    background: white;
+    border: 1px solid rgba(110, 231, 183, 0.5);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 20;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    color: #10B981;
+}
+
+.slider-arrow:hover {
+    background: #6EE7B7;
+    color: white;
+    border-color: #6EE7B7;
+    transform: scale(1.1);
+}
+
+.prev-arrow {
+    position: absolute;
+    left: 5%;
+}
+
+.next-arrow {
+    position: absolute;
+    right: 5%;
+}
+
+/* --- Carousel Dots --- */
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 40px;
+}
+
+.carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(110, 231, 183, 0.3);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.carousel-dot:hover {
+    background: rgba(110, 231, 183, 0.6);
+    transform: scale(1.2);
+}
+
+.carousel-dot.active {
+    background: #10B981;
+    transform: scale(1.3);
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.4);
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 1200px) {
+    .dashboard-card.prev {
+        transform: translate(-50%, -50%) scale(0.8) translateX(-200px) rotateY(10deg);
+    }
+
+    .dashboard-card.next {
+        transform: translate(-50%, -50%) scale(0.8) translateX(200px) rotateY(-10deg);
+    }
+}
+
+@media (max-width: 992px) {
+    .dashboard-card {
+        min-width: 320px;
+        width: 320px;
+    }
+
+    .dashboard-card.prev,
+    .dashboard-card.next {
+        opacity: 0.3;
+    }
+
+    .slider-arrow {
+        width: 50px;
+        height: 50px;
+    }
+
+    .prev-arrow {
+        left: 2%;
+    }
+
+    .next-arrow {
+        right: 2%;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-packs-section {
+        padding: 100px 0;
+    }
+
+    .dashboard-packs-section h2 {
+        font-size: 2rem;
+        padding: 0 20px;
+    }
+
+    .dashboard-packs-section .intro-text {
+        font-size: 1rem;
+        padding: 0 20px;
+        margin-bottom: 40px;
+    }
+
+    .packs-container {
+        min-height: 580px;
+    }
+
+    .dashboard-card {
+        min-width: 290px;
+        width: 290px;
+    }
+
+    .dashboard-card.active {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    .dashboard-card.active:hover {
+        transform: translate(-50%, -50%) scale(1.02);
+    }
+
+    /* Masquer les cartes non actives sur mobile */
+    .dashboard-card.prev,
+    .dashboard-card.next {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+        pointer-events: none;
+    }
+
+    .card-header-gradient {
+        padding: 25px;
+    }
+
+    .card-body {
+        padding: 30px;
+    }
+
+    .price-display .amount {
+        font-size: 48px;
+    }
+
+    .slider-arrow {
+        width: 45px;
+        height: 45px;
+    }
+
+    .prev-arrow {
+        left: 10px;
+    }
+
+    .next-arrow {
+        right: 10px;
+    }
+
+    /* Désactiver les effets 3D sur mobile */
+    .light-animated-grid {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard-card {
+        min-width: 260px;
+        width: 260px;
+    }
+
+    .card-header-gradient {
+        padding: 20px;
+    }
+
+    .card-body {
+        padding: 25px;
+    }
+
+    .price-display .amount {
+        font-size: 42px;
+    }
+
+    .dashboard-cta {
+        padding: 15px;
+        font-size: 13px;
+    }
+
+    .dashboard-features li {
+        font-size: 14px;
+    }
+}

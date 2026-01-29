@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
+:root {
+    --terroir-green: #81C784;
+    --terroir-blue: #4FC3F7;
+    --terroir-beige: #E0D7C1;
+    --terroir-yellow: #FFE082;
+    --terroir-white: #FFFFFF;
+    --terroir-cyan: #00E5FF;
+    --terroir-font-title: 'Playfair Display', serif;
+    --terroir-font-body: 'Roboto', sans-serif;
+}
+
+.terroir-section {
+    width: 100%;
+    min-height: 200vh;
+    background: linear-gradient(180deg, var(--terroir-beige) 0%, var(--terroir-green) 100%);
+    position: relative;
+    overflow: hidden;
+    font-family: var(--terroir-font-body);
+}
+
+.terroir-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* 1. Introduction */
+.terroir-intro {
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 5%;
+    position: relative;
+    z-index: 2;
+}
+
+.terroir-title {
+    font-family: var(--terroir-font-title);
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 900;
+    color: var(--terroir-green);
+    text-shadow: 0 0 15px rgba(0, 229, 255, 0.4);
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.terroir-intro-text {
+    max-width: 800px;
+    color: var(--terroir-blue);
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.terroir-intro-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1.5rem;
+    text-align: left;
+    display: inline-block;
+}
+
+.terroir-intro-list li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.terroir-intro-list li::before {
+    content: '🌱';
+    position: absolute;
+    left: 0;
+}
+
+/* 2. Part 1: Elements Orbit */
+.terroir-orbit-container {
+    height: 60vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.terroir-central-globe {
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle at 30% 30%, var(--terroir-beige), var(--terroir-green));
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgba(0, 229, 255, 0.3), inset -10px -10px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.globe-veins {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20,20 Q40,10 50,50 T80,80' stroke='%2300E5FF' fill='none' stroke-width='0.5' opacity='0.5'/%3E%3Cpath d='M10,50 Q30,60 70,30' stroke='%2300E5FF' fill='none' stroke-width='0.5' opacity='0.5'/%3E%3C/svg%3E");
+    animation: pulseVeins 4s linear infinite;
+}
+
+@keyframes pulseVeins {
+
+    0%,
+    100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.7;
+        transform: scale(1.05);
+    }
+}
+
+.orbit-cards-wrapper {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.orbit-card {
+    position: absolute;
+    width: 250px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    z-index: 5;
+}
+
+.orbit-card:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0 30px var(--terroir-cyan);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.orbit-card h3 {
+    font-family: var(--terroir-font-title);
+    color: var(--terroir-white);
+    margin-bottom: 10px;
+}
+
+.orbit-card p {
+    font-size: 0.85rem;
+    color: var(--terroir-white);
+    opacity: 0.9;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.orbit-line {
+    position: absolute;
+    height: 1px;
+    background: linear-gradient(90deg, var(--terroir-cyan), transparent);
+    transform-origin: left center;
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+/* 3. Transition */
+.terroir-transition {
+    height: 20vh;
+    background: rgba(79, 195, 247, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.transition-text {
+    font-family: var(--terroir-font-body);
+    font-style: italic;
+    font-size: 2rem;
+    color: var(--terroir-yellow);
+    text-align: center;
+    z-index: 3;
+}
+
+.horizon-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 1200 120' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z' fill='%234FC3F7' opacity='0.2'/%3E%3C/svg%3E");
+    background-size: cover;
+}
+
+/* 4. Part 2: Threats Stacking */
+.terroir-threats-container {
+    min-height: 90vh;
+    padding: 100px 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    position: relative;
+    z-index: 2;
+}
+
+.threat-card {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: rgba(224, 215, 193, 0.9);
+    padding: 40px;
+    border-radius: 20px;
+    border: 2px solid var(--terroir-cyan);
+    display: flex;
+    gap: 30px;
+    box-shadow: 10px 10px 0px rgba(0, 229, 255, 0.2);
+    transform: translateY(100px);
+    opacity: 0;
+    position: relative;
+}
+
+.threat-image {
+    flex: 0 0 250px;
+    height: 250px;
+    background: #000;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.threat-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.threat-content {
+    flex: 1;
+}
+
+.threat-content h2 {
+    font-family: var(--terroir-font-title);
+    color: var(--terroir-green);
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.threat-content h2::after {
+    display: none;
+}
+
+.threat-table {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    border-collapse: collapse;
+}
+
+.threat-table th {
+    text-align: left;
+    padding: 10px;
+    color: var(--terroir-green);
+    border-bottom: 2px solid var(--terroir-green);
+}
+
+.threat-table td {
+    padding: 10px;
+    color: var(--terroir-blue);
+}
+
+.threat-desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #444;
+}
+
+.threat-stats {
+    margin-top: 1rem;
+    font-weight: bold;
+    color: var(--terroir-cyan);
+}
+
+.threat-solution {
+    margin-top: 1rem;
+    padding: 10px;
+    background: rgba(0, 229, 255, 0.1);
+    border-left: 4px solid var(--terroir-cyan);
+    font-size: 0.9rem;
+}
+
+.threat-card:nth-child(even) {
+    flex-direction: row-reverse;
+    align-self: flex-end;
+}
+
+/* Tooltip expansion */
+.card-expanded {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 90vw;
+    max-width: 800px;
+    height: 70vh;
+    background: var(--terroir-white);
+    z-index: 100;
+    border-radius: 30px;
+    padding: 40px;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card-expanded.active {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    pointer-events: all;
+}
+
+.overlay-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 2rem;
+    color: var(--terroir-green);
+}
+
+@media (max-width: 768px) {
+    .orbit-cards-wrapper {
+        width: 300px;
+        height: 300px;
+    }
+
+    .orbit-card {
+        width: 150px;
+        padding: 10px;
+    }
+
+    .threat-card {
+        flex-direction: column !important;
+    }
+
+    .threat-image {
+        flex: 0 0 150px;
+        width: 100%;
+    }
+}

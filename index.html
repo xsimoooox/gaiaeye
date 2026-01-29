@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>GaiaEye</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Dancing+Script:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+  <div class="gaia-title" id="gaia-title">
+    <span class="gaia-text">Gaia</span><span class="eye-text">Eye</span>
+  </div>
+
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <nav id="main-nav" class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="platform.html">Platform</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+
+  <div id="content-spacer" style="height: 100vh;"></div>
+
+  <div id="content" class="content-section">
+    <h1></h1>
+    <p> </p>
+
+    <!-- New Scroll Text Container -->
+    <div id="scroll-text-container" class="scroll-text-container" style="flex-direction: column;">
+      <div id="line1" class="typewriter-line">They didn’t solve a problem…</div>
+      <div id="line2" class="typewriter-line">they used eyes that see what others cannot,</div>
+      <div id="line3" class="typewriter-line">to understand the Earth</div>
+    </div>
+  </div>
+
+  <!-- Sponsors Section: Minimalist auto-scrolling logos -->
+  <div id="sponsors-section" class="sponsors-section">
+    <div class="sponsors-track">
+      <!-- First set of logos -->
+      <div class="sponsor-logo">
+        <img src="images/logo1.jpg" alt="Partner Logo">
+      </div>
+      <div class="sponsor-logo">
+        <img src="images/logo2.jpg" alt="Partner Logo">
+      </div>
+      <div class="sponsor-logo">
+        <img src="images/logo3.png" alt="Partner Logo">
+      </div>
+      <!-- Duplicate set for seamless loop -->
+      <div class="sponsor-logo">
+        <img src="images/logo1.jpg" alt="Partner Logo">
+      </div>
+      <div class="sponsor-logo">
+        <img src="images/logo2.jpg" alt="Partner Logo">
+      </div>
+      <div class="sponsor-logo">
+        <img src="images/logo3.png" alt="Partner Logo">
+      </div>
+      <!-- Third set for smoother infinite scroll -->
+      <div class="sponsor-logo">
+        <img src="images/logo1.jpg" alt="Partner Logo">
+      </div>
+      <div class="sponsor-logo">
+        <img src="images/logo2.jpg" alt="Partner Logo">
+      </div>
+      <div class="sponsor-logo">
+        <img src="images/logo3.png" alt="Partner Logo">
+      </div>
+    </div>
+  </div>
+
+  <!-- Who We Are Section -->
+  <section id="who-we-are" class="who-we-are-section">
+    <div class="who-container">
+      <div class="who-content">
+        <h2 class="who-title">Who We Are</h2>
+        <div class="who-text">
+          <p class="who-intro">
+            <strong>GAIAEYE</strong> is revolutionizing humanity's relationship with the Earth through a unique alliance
+            between space technology and artificial intelligence. Our platform harnesses advanced satellite data to
+            decode the secrets of soils, ecosystems, and natural hazards, transforming randomness into predictive
+            science.
+          </p>
+          <p class="who-mission">
+            Whether it's recreating the world's most renowned agricultural terroirs anywhere with
+            <strong>TERRA-GENESIS</strong>, mapping and prioritizing survivors in disasters with our intelligent
+            bracelets, or designing buildings in perfect harmony with their environment through
+            <strong>TERRA-FOUNDATION</strong>, we don't just observe—we understand, model, and transform.
+          </p>
+          <p class="who-vision">
+            <strong>GAIAEYE</strong> marks the end of environmental uncertainty and the dawn of an era where every human
+            intervention is informed, optimized, and sustainable.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nos Plateformes Section -->
+  <section id="platforms" class="platforms-section">
+    <div class="platforms-header">
+      <h2 class="platforms-title">Our Solutions</h2>
+      <p class="platforms-subtitle">Discover our innovative AI-powered Earth observation solutions.
+        Powerful tools to analyze, understand, and protect our planet.</p>
+    </div>
+
+    <div class="platforms-container">
+      <button class="carousel-btn prev" aria-label="Previous">‹</button>
+
+      <div class="platforms-carousel">
+        <div class="platform-card side" data-platform="2">
+          <div class="platform-image-wrapper">
+            <img src="images/platform_terra_genesis.png" alt="constucTerra" class="platform-image">
+          </div>
+          <div class="platform-info">
+            <h3 class="platform-name">constucTerra</h3>
+            <p class="platform-description">We read the soil’s past and its invisible movements, as well as its climatic
+              future, using satellites and AI. We build with the land, not against it.</p>
+            <a href="ConstrucTerra/t3/index.html" class="platform-discover-btn">Discover</a>
+          </div>
+        </div>
+
+        <div class="platform-card active" data-platform="0">
+          <div class="platform-image-wrapper">
+            <img src="images/platform_terranova_new.png" alt="terranova" class="platform-image">
+          </div>
+          <div class="platform-info">
+            <h3 class="platform-name">terranova</h3>
+            <p class="platform-description">From space, we analyze minerals, water, climate, and soil life to identify
+              the perfect conditions for the desired crop. If nature has limits, we reinvent it to feed tomorrow.</p>
+            <a href="TerraNova/t1/terra-genesis/dist/index.html" class="platform-discover-btn">Discover</a>
+          </div>
+        </div>
+
+        <div class="platform-card side" data-platform="1">
+          <div class="platform-image-wrapper">
+            <img src="images/platform_villes_vertes.png" alt="LifePulse" class="platform-image">
+          </div>
+          <div class="platform-info">
+            <h3 class="platform-name">LifePulse</h3>
+            <p class="platform-description">Our bracelets detect shocks, heartbeats, and movements, even under rubble.
+              Connected to satellites, they map survivors in real-time.</p>
+            <a href="platform.html" class="platform-discover-btn">Discover</a>
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-btn next" aria-label="Next">›</button>
+    </div>
+
+    <!-- Navigation Dots -->
+    <div class="platform-dots">
+      <span class="dot active" data-index="0"></span>
+      <span class="dot" data-index="1"></span>
+      <span class="dot" data-index="2"></span>
+    </div>
+  </section>
+
+  <!-- Space for scrolling removed -->
+
+  <!-- Blog Section -->
+  <section id="blog" class="blog-section">
+    <div class="blog-container">
+      <h2 class="section-title">Our Insights</h2>
+      <div class="blog-grid">
+        <article class="blog-card">
+          <div class="blog-image-wrapper">
+            <img src="images/blog_ai_earth.png" alt="AI Reality">
+          </div>
+          <div class="blog-content">
+            <span class="blog-tag">Technology</span>
+            <h3 class="blog-title">The Future of AI in Earth Observation</h3>
+            <p class="blog-excerpt">Exploring how transformer models are changing the way we process hyperspectral data.
+            </p>
+            <a href="blog.html" class="blog-btn">Read More</a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-image-wrapper">
+            <img src="images/blog_agriculture.png" alt="Precision Agriculture">
+          </div>
+          <div class="blog-content">
+            <span class="blog-tag">Sustainability</span>
+            <h3 class="blog-title">Sustainable Farming with Satellite Tech</h3>
+            <p class="blog-excerpt">Reducing water waste and optimizing crop yields through real-time soil analysis.</p>
+            <a href="blog.html" class="blog-btn">Read More</a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-image-wrapper">
+            <img src="images/platform_villes_vertes.png" alt="Smart Cities">
+          </div>
+          <div class="blog-content">
+            <span class="blog-tag">Urban Planning</span>
+            <h3 class="blog-title">Building Resilient Cities for 2030</h3>
+            <p class="blog-excerpt">How digital twins help urban planners mitigate the effects of urban heat islands.
+            </p>
+            <a href="blog.html" class="blog-btn">Read More</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="contact-container" style="display: block; text-align: center;">
+      <div class="contact-card"
+        style="background: rgba(255, 255, 255, 0.03); padding: 60px; border-radius: 30px; border: 1px solid rgba(255, 255, 255, 0.05); max-width: 800px; margin: 0 auto;">
+        <h2 class="contact-title" style="font-size: 3rem; margin-bottom: 20px;">Ready to Explore the Invisible?</h2>
+        <p class="contact-subtitle" style="font-size: 1.25rem; margin-bottom: 40px; color: rgba(255, 255, 255, 0.7);">
+          Join the Earth observation revolution. Our experts are here to guide you in your transition to spatial
+          intelligence.
+        </p>
+        <a href="contact.html" class="submit-btn"
+          style="display: inline-block; text-decoration: none; padding: 18px 45px; font-size: 1.1rem;">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (Synchronized) -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <!-- Mission -->
+        <div class="footer-column">
+          <h3 class="footer-title"><img src="images/gaiaeye-logo.png" alt="GaiaEye Logo" class="footer-logo"> GAIAEYE
+          </h3>
+          <p class="footer-mission">An innovative platform dedicated to Earth observation via artificial intelligence.
+            We transform satellite data into actionable insights for a sustainable future.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-column">
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="platform.html">Platform</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Social Media -->
+        <div class="footer-column">
+          <h4 class="footer-heading">Follow Us</h4>
+          <div class="footer-social">
+            <a href="#" class="footer-social-link" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+              </svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="Twitter">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M22.46 6c-.85.38-1.78.64-2.75.76 1-.6 1.76-1.55 2.12-2.68-.93.55-1.96.96-3.06 1.18-.88-.94-2.13-1.53-3.51-1.53-2.66 0-4.81 2.16-4.81 4.81 0 .38.04.75.13 1.10-4-.2-7.55-2.12-9.93-5.04-.42.72-.66 1.55-.66 2.44 0 1.67.85 3.14 2.14 4-.79-.03-1.53-.24-2.18-.6v.06c0 2.33 1.66 4.28 3.86 4.72-.4.11-.83.17-1.27.17-.31 0-.62-.03-.91-.08.62 1.94 2.42 3.35 4.55 3.39-1.67 1.31-3.77 2.09-6.05 2.09-.39 0-.78-.02-1.17-.07 2.18 1.4 4.77 2.21 7.55 2.21 9.06 0 14.01-7.5 14.01-14.01 0-.21 0-.42-.02-.63.96-.7 1.8-1.56 2.46-2.55z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Legal -->
+        <div class="footer-column">
+          <h4 class="footer-heading">Legal Information</h4>
+          <ul class="footer-links">
+            <li><a href="#mentions">Legal Notice</a></li>
+            <li><a href="#privacy">Privacy Policy</a></li>
+            <li><a href="#cookies">Cookies</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 GAIAEYE. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <style>
+    .sponsors-section {
+      background: linear-gradient(180deg, #000000 0%, #0a0a0a 100%);
+      padding: 40px 0;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .sponsors-track {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+      animation: scroll-left 40s linear infinite;
+      width: max-content;
+    }
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-33.333%);
+      }
+    }
+
+    .sponsor-logo {
+      flex-shrink: 0;
+      width: 100px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .sponsor-logo img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      filter: grayscale(100%) brightness(0.4) contrast(0.8);
+      opacity: 0.5;
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .sponsor-logo:hover img {
+      filter: grayscale(30%) brightness(1) contrast(1.1);
+      opacity: 1;
+      transform: scale(1.08);
+    }
+
+    /* Pause animation on hover (optional) */
+    .sponsors-section:hover .sponsors-track {
+      animation-play-state: paused;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .sponsors-section {
+        padding: 60px 0;
+      }
+
+      .sponsors-track {
+        gap: 60px;
+      }
+
+      .sponsor-logo {
+        width: 140px;
+        height: 100px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .sponsors-section {
+        padding: 40px 0;
+      }
+
+      .sponsors-track {
+        gap: 40px;
+      }
+
+      .sponsor-logo {
+        width: 120px;
+        height: 80px;
+      }
+    }
+
+    /* Who We Are Section Styles */
+    .who-we-are-section {
+      background: #000000;
+      padding: 120px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+
+
+    .who-container {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .who-content {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s ease-out forwards;
+      animation-delay: 0.3s;
+      text-align: center;
+    }
+
+
+
+    .who-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3.5rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 30px;
+      letter-spacing: -1px;
+    }
+
+    .who-text {
+      color: #e5e7eb;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .who-text p {
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    .who-intro {
+      animation-delay: 0.5s;
+      font-size: 1.2rem;
+    }
+
+    .who-mission {
+      animation-delay: 0.7s;
+    }
+
+    .who-vision {
+      animation-delay: 0.9s;
+    }
+
+    .who-values {
+      animation-delay: 1.1s;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .who-text p {
+      transform: translateY(20px);
+    }
+
+    .label {
+      background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 600;
+      font-size: 1.15rem;
+    }
+
+    .who-text strong {
+      color: #10b981;
+      font-weight: 600;
+    }
+
+
+    /* Responsive Design for Who We Are */
+    @media (max-width: 968px) {
+      .who-title {
+        font-size: 2.8rem;
+      }
+
+      .who-content {
+        transform: translateY(30px);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .who-we-are-section {
+        padding: 80px 20px;
+      }
+
+      .who-title {
+        font-size: 2.2rem;
+      }
+
+      .who-text {
+        font-size: 1rem;
+      }
+
+      .who-intro {
+        font-size: 1.1rem;
+      }
+
+      .label {
+        font-size: 1.05rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .who-we-are-section {
+        padding: 60px 15px;
+      }
+
+      .who-container {
+        gap: 40px;
+      }
+
+      .who-title {
+        font-size: 1.8rem;
+      }
+
+      .who-text {
+        font-size: 0.95rem;
+      }
+    }
+
+    /* Platforms Section Styles */
+    .platforms-section {
+      background: linear-gradient(180deg, #000000 0%, #0a0a14 100%);
+      padding: 120px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .platforms-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.05) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .platforms-header {
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto 80px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .platforms-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3.5rem;
+      font-weight: 700;
+      text-align: center;
+      background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 30px;
+      letter-spacing: 1px;
+    }
+
+    .platforms-subtitle {
+      font-size: 1.2rem;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.8;
+      font-family: 'Segoe UI', sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .platforms-container {
+      position: relative;
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .platforms-carousel {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      flex: 1;
+      min-height: 500px;
+      padding: 40px 0;
+      transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .carousel-btn {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #fff;
+      font-size: 2.5rem;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      z-index: 20;
+      backdrop-filter: blur(10px);
+    }
+
+    .carousel-btn:hover {
+      background: #10b981;
+      border-color: #10b981;
+      transform: scale(1.1);
+      box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+    }
+
+    .carousel-btn.prev {
+      left: 20px;
+    }
+
+    .carousel-btn.next {
+      right: 20px;
+    }
+
+    .platform-card {
+      position: relative;
+      background: linear-gradient(145deg, #1a1a2e 0%, #16213e 100%);
+      border-radius: 20px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+      flex-shrink: 0;
+      /* Side cards: smaller, blurred, low opacity */
+      width: 320px;
+      transform: scale(0.85);
+      filter: blur(3px);
+      opacity: 0.5;
+    }
+
+    .platform-card.active {
+      /* Center card: larger, sharp, full opacity */
+      width: 480px;
+      transform: scale(1);
+      filter: blur(0);
+      opacity: 1;
+      box-shadow:
+        0 30px 80px rgba(59, 130, 246, 0.5),
+        0 0 120px rgba(16, 185, 129, 0.4),
+        inset 0 0 60px rgba(16, 185, 129, 0.1);
+      z-index: 10;
+      cursor: default;
+      border: 1px solid rgba(16, 185, 129, 0.5);
+    }
+
+    .platform-card:hover:not(.active) {
+      transform: scale(0.9);
+      opacity: 0.75;
+      filter: blur(2px);
+    }
+
+    .platform-image-wrapper {
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .platform-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .platform-card.active .platform-image {
+      transform: scale(1.05);
+    }
+
+    .platform-info {
+      padding: 35px;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(15px);
+      min-height: 200px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .platform-name {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.5rem;
+      color: #ffffff;
+      margin-bottom: 12px;
+      transition: color 0.3s ease;
+    }
+
+    .platform-card.active .platform-name {
+      background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .platform-description {
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.7;
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.5s ease;
+      margin-bottom: 0;
+    }
+
+    .platform-card.active .platform-description {
+      opacity: 1;
+      max-height: 150px;
+      margin-bottom: 25px;
+    }
+
+    .platform-discover-btn {
+      display: inline-block;
+      padding: 12px 30px;
+      background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
+      color: #fff;
+      text-decoration: none;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      opacity: 0;
+      transform: translateY(10px);
+      max-height: 0;
+      overflow: hidden;
+      border: 2px solid transparent;
+    }
+
+    .platform-card.active .platform-discover-btn {
+      opacity: 1;
+      transform: translateY(0);
+      max-height: 50px;
+      margin-top: 10px;
+    }
+
+    .platform-discover-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(16, 185, 129, 0.4);
+      background: linear-gradient(135deg, #059669 0%, #2563eb 100%);
+    }
+
+    .platform-discover-btn:active {
+      transform: translateY(-1px);
+    }
+
+    /* Navigation Dots */
+    .platform-dots {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 50px;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .dot:hover {
+      background: rgba(255, 255, 255, 0.5);
+      transform: scale(1.2);
+    }
+
+    .dot.active {
+      background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
+      width: 30px;
+      border-radius: 6px;
+    }
+
+    /* Responsive Design for Platforms */
+    @media (max-width: 1200px) {
+      .platform-card {
+        width: 280px;
+      }
+
+      .platform-card.active {
+        width: 400px;
+      }
+
+      .platforms-carousel {
+        gap: 30px;
+      }
+    }
+
+    @media (max-width: 968px) {
+      .platforms-title {
+        font-size: 2.5rem;
+      }
+
+      .platforms-subtitle {
+        font-size: 1.1rem;
+        padding: 0 20px;
+      }
+
+      .platforms-header {
+        margin-bottom: 60px;
+      }
+
+      .platforms-carousel {
+        gap: 20px;
+        flex-direction: column;
+        min-height: auto;
+      }
+
+      .platform-card,
+      .platform-card.active {
+        width: 100%;
+        max-width: 500px;
+        transform: scale(1);
+        filter: blur(0);
+        opacity: 1;
+      }
+
+      /* Hide side cards on mobile if preferred, or just make them stack */
+      /* Actually let's keep them stacking for this layout */
+      .platform-card.side {
+        display: none;
+        /* Hide side cards on small screens for better focus on active */
+      }
+
+      .platform-card.active .platform-description {
+        max-height: 200px;
+      }
+
+      .carousel-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .platforms-title {
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+
+      .platforms-subtitle {
+        font-size: 1rem;
+        padding: 0 10px;
+      }
+
+      .platforms-header {
+        margin-bottom: 40px;
+      }
+
+      .platform-card.active {
+        max-width: 100%;
+      }
+
+      .platform-image-wrapper {
+        height: 200px;
+      }
+
+      .platform-name {
+        font-size: 1.25rem;
+      }
+    }
+
+    /* Blog & Contact Sections */
+    .section-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 60px;
+      background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .blog-section,
+    .contact-section {
+      padding: 100px 20px;
+      background: #000;
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .blog-card {
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all 0.4s ease;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-10px);
+      border-color: rgba(16, 185, 129, 0.3);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .blog-image-wrapper {
+      height: 200px;
+      overflow: hidden;
+    }
+
+    .blog-image-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .blog-card:hover .blog-image-wrapper img {
+      transform: scale(1.1);
+    }
+
+    .blog-content {
+      padding: 30px;
+    }
+
+    .blog-tag {
+      display: inline-block;
+      padding: 5px 12px;
+      background: rgba(16, 185, 129, 0.1);
+      color: #10b981;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-radius: 50px;
+      margin-bottom: 15px;
+    }
+
+    .blog-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.25rem;
+      margin-bottom: 15px;
+      color: #fff;
+      line-height: 1.4;
+    }
+
+    .blog-excerpt {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .blog-btn {
+      display: inline-block;
+      color: #3b82f6;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .blog-btn:hover {
+      color: #10b981;
+    }
+
+    /* Contact Form */
+    .contact-container {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .contact-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .contact-subtitle {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 15px 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      color: #fff;
+      font-family: inherit;
+      transition: all 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #10b981;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .submit-btn {
+      padding: 15px 30px;
+      background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
+      border: none;
+      border-radius: 12px;
+      color: #fff;
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .submit-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+    }
+
+    /* Footer Styles */
+    .footer {
+      background: #000;
+      padding: 80px 0 40px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+
+    .footer-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      letter-spacing: 2px;
+      color: #fff;
+    }
+
+    .footer-mission {
+      color: rgba(255, 255, 255, 0.6);
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    .footer-heading {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1rem;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      color: #fff;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-links li {
+      margin-bottom: 12px;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.6);
+      text-decoration: none;
+      transition: color 0.3s ease;
+      font-size: 0.9rem;
+    }
+
+    .footer-links a:hover {
+      color: #0f9d58;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 15px;
+    }
+
+    .footer-social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 50%;
+      color: #fff;
+      transition: all 0.3s ease;
+    }
+
+    .footer-social-link svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .footer-social-link:hover {
+      background: #0f9d58;
+      transform: translateY(-3px);
+    }
+
+    .footer-bottom {
+      padding-top: 40px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: center;
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 968px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .contact-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+      }
+
+      .contact-title {
+        font-size: 2.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r69/three.min.js"></script>
+  <script src="scripts/threex.atmospherematerial.js"></script>
+  <!-- Stats.js removed -->
+  <script src="scripts/trackball-controls.js"></script>
+  <script src="scripts/axes.js"></script>
+  <script src="scripts/main.js"></script>
+
+  <script>
+    // Scroll Animation Logic
+    window.addEventListener('scroll', () => {
+      const title = document.getElementById('gaia-title');
+      const nav = document.getElementById('main-nav');
+      const scrollY = window.scrollY;
+      const windowHeight = window.innerHeight;
+
+      // --- Header Transition Logic ---
+      const threshold = windowHeight * 0.8;
+
+      if (scrollY > threshold) {
+        title.classList.add('nav-state');
+        nav.classList.add('visible');
+        title.style.top = '';
+        title.style.transform = '';
+      } else {
+        title.classList.remove('nav-state');
+        nav.classList.remove('visible');
+        title.style.top = '';
+        title.style.transform = '';
+      }
+
+      // Show/hide hamburger based on nav visibility (on desktop only)
+      const hamburger = document.getElementById('hamburger');
+      if (hamburger && window.innerWidth > 968) {
+        if (scrollY > threshold) {
+          hamburger.classList.add('show');
+        } else {
+          hamburger.classList.remove('show');
+        }
+      }
+
+      // --- Animated Text Gradient Logic ---
+      const textElement = document.getElementById('gradient-text');
+      const textContainer = document.getElementById('scroll-text-container');
+
+      if (textContainer) {
+        const rect = textContainer.getBoundingClientRect();
+        const elementHeight = textContainer.offsetHeight;
+
+        // Calculate visibility progress relative to viewport center
+        const viewCenter = windowHeight / 2;
+        const elementCenter = rect.top + elementHeight / 2;
+
+        // Distance from center
+        const distance = viewCenter - elementCenter;
+        const range = 400; // Effect range
+
+        // Define progress here
+        let progress = (distance + range) / (range * 2);
+        progress = Math.max(0, Math.min(1, progress)); // Clamp 0 to 1
+
+        // Check if container is visible
+        if (progress > 0.2) {
+          const lines = document.querySelectorAll('.typewriter-line');
+          if (lines.length > 0 && !lines[0].classList.contains('typing-active') && !lines[0].classList.contains('typing-done')) {
+
+            // Sequence Animation
+            const animateLine = (index) => {
+              if (index >= lines.length) return;
+
+              const line = lines[index];
+              line.classList.add('typing-active');
+
+              // Animation duration is approx 2s in CSS
+              setTimeout(() => {
+                line.classList.remove('typing-active');
+                line.classList.add('typing-done'); // Keep it visible without cursor
+
+                // Trigger next
+                animateLine(index + 1);
+              }, 2000); // 2 seconds per line
+            };
+
+            // Start sequence
+            animateLine(0);
+          }
+        }
+      }
+
+      // --- Expanding Image Logic ---
+      // Fix Syntax: removed extra closing brackets/bad nesting from previous step
+      const imgSection = document.getElementById('image-scroll-section');
+      const imgElement = document.getElementById('expanding-image');
+
+      if (imgSection && imgElement) {
+        const rect = imgSection.getBoundingClientRect();
+        // Since wrapper is sticky, rect.top within the viewport determines scroll progress relative to the section start
+        // Actually, rect.top is position relative to viewport. 
+        // When section hits top (rect.top <= 0), we start animating.
+
+        const scrollDistance = -rect.top;
+        const animationRange = windowHeight * 1.5; // Complete expansion after scrolling 1.5 screens
+
+        let imgProgress = scrollDistance / animationRange;
+        imgProgress = Math.max(0, Math.min(1, imgProgress));
+
+        if (imgProgress >= 0) {
+          // Width: 30% -> 100%
+          const width = 30 + (70 * imgProgress);
+          // Radius: 20px -> 0px
+          const radius = 20 - (20 * imgProgress);
+
+          imgElement.style.width = `${width}%`;
+          imgElement.style.borderRadius = `${radius}px`;
+
+          if (imgProgress >= 0.95) {
+            // Full screen mode
+            imgElement.style.height = '100vh';
+            imgElement.style.objectFit = 'cover';
+          } else {
+            imgElement.style.height = 'auto';
+            imgElement.style.objectFit = 'contain';
+          }
+        }
+      }
+    });
+  </script>
+
+  <script src="scripts/navigation.js"></script>
+  <script src="scripts/interactions.js"></script>
+</body>
+
+</html>

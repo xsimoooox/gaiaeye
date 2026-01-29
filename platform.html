@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platform - GAIAEYE</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Segoe+UI:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        .page-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('images/platform-bg.png');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .page-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 4rem;
+            color: #fff;
+            text-align: center;
+            text-shadow: 0 0 20px rgba(0, 255, 100, 0.5);
+        }
+
+        /* Platform Page Specific Styles */
+        .platform-item {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            margin-bottom: 100px;
+        }
+
+        .platform-item.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .platform-image-wrapper {
+            flex: 1;
+            height: 350px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .platform-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .platform-item:hover .platform-image-wrapper img {
+            transform: scale(1.05);
+        }
+
+        .platform-info {
+            flex: 1;
+        }
+
+        .platform-name {
+            color: #fff;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-family: 'Orbitron', sans-serif;
+            position: relative;
+            display: inline-block;
+        }
+
+        .platform-name::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: #0f9d58;
+        }
+
+        .platform-desc {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            font-family: 'Segoe UI', sans-serif;
+            margin-bottom: 30px;
+        }
+
+        .platform-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: transparent;
+            border: 2px solid #0f9d58;
+            color: #fff;
+            font-family: 'Orbitron', sans-serif;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+
+        .platform-btn:hover {
+            background: #0f9d58;
+            box-shadow: 0 0 20px rgba(15, 157, 88, 0.4);
+            transform: translateY(-3px);
+        }
+
+        /* Responsive Styles */
+        @media screen and (max-width: 992px) {
+            .page-title {
+                font-size: 3rem;
+            }
+
+            .platform-item {
+                flex-direction: column;
+                gap: 30px;
+                text-align: center;
+                margin-bottom: 80px;
+            }
+
+            .platform-item.reverse {
+                flex-direction: column;
+            }
+
+            .platform-image-wrapper {
+                width: 100%;
+                height: 300px;
+            }
+
+            .platform-name::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .page-title {
+                font-size: 2.2rem;
+            }
+
+            .platform-image-wrapper {
+                height: 200px;
+            }
+
+            .platform-name {
+                font-size: 2rem;
+            }
+
+            .platform-btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="gaia-title" id="gaia-title">
+        <span class="gaia-text">Gaia</span><span class="eye-text">Eye</span>
+    </div>
+
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav id="main-nav" class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="platform.html" class="active">Platform</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <header class="page-header">
+        <h1 class="page-title">Our Solutions</h1>
+    </header>
+
+    <section class="platforms-section" style="padding: 100px 40px; background: #000;">
+        <div class="platforms-container" style="max-width: 1200px; margin: 0 auto;">
+            <!-- Feature 1: terranova -->
+            <div class="platform-item tilt-card">
+                <div class="platform-image-wrapper">
+                    <img src="images/platform_terranova_new.png" alt="Nimbo Platform Interface">
+                </div>
+                <div class="platform-info">
+                    <h2 class="platform-name">terranova</h2>
+                    <p class="platform-desc">
+                        From space, we analyze minerals, water, climate, and soil life to identify the perfect
+                        conditions for the desired crop.
+                        Then, we recreate those balances where they do not exist.
+                        With the TERRA-CUBE, ordinary soil becomes land of excellence.
+                        If nature has limits, we reinvent it to feed tomorrow.
+
+                    </p>
+                    <a href="TerraNova/t1/terra-genesis/dist/index.html" class="platform-btn">Access Site</a>
+                </div>
+            </div>
+
+            <!-- Feature 2: constucTerra -->
+            <div class="platform-item reverse tilt-card">
+                <div class="platform-image-wrapper">
+                    <img src="images/platform_villes_vertes.png" alt="Terra Genesis Analysis">
+                </div>
+                <div class="platform-info">
+                    <h2 class="platform-name">constucTerra</h2>
+                    <p class="platform-desc">
+                        We read the
+                        soil’s past and its invisible movements, as well as its climatic future, using satellites and
+                        AI.
+                        Our buildings no longer impose themselves on the Earth.
+                        They live with it.
+                        We build with the land, not against it.
+
+                    </p>
+                    <a href="ConstrucTerra/t3/index.html" class="platform-btn">Access Site</a>
+                </div>
+            </div>
+
+            <!-- Feature 3: Villes Vertes -->
+            <div class="platform-item tilt-card">
+                <div class="platform-image-wrapper">
+                    <img src="images/platform-monitoring.png" alt="Green Cities Planning">
+                </div>
+                <div class="platform-info">
+                    <h2 class="platform-name">LifePulse</h2>
+                    <p class="platform-desc">
+                        Our bracelets detect shocks, heartbeats, and movements, even under rubble. Connected to
+                        satellites, they map survivors in real-time. Even without GPS, every vibration guides rescue
+                        teams. Every beat becomes a call. Every second, a chance.
+                    </p>
+                    <a href="#" class="platform-btn">coming soon</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <!-- Mission -->
+                <div class="footer-column">
+                    <h3 class="footer-title"><img src="images/gaiaeye-logo.png" alt="GaiaEye Logo" class="footer-logo">
+                        GAIAEYE</h3>
+                    <p class="footer-mission">An innovative platform dedicated to Earth observation via artificial
+                        intelligence. We transform satellite data into actionable insights for a sustainable future.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-column">
+                    <h4 class="footer-heading">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="index.html#platforms">Platform</a></li>
+                        <li><a href="index.html#blog">Blog</a></li>
+                        <li><a href="index.html#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div class="footer-column">
+                    <h4 class="footer-heading">Follow Us</h4>
+                    <div class="footer-social">
+                        <a href="#" class="footer-social-link" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="footer-social-link" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M22.46 6c-.85.38-1.78.64-2.75.76 1-.6 1.76-1.55 2.12-2.68-.93.55-1.96.96-3.06 1.18-.88-.94-2.13-1.53-3.51-1.53-2.66 0-4.81 2.16-4.81 4.81 0 .38.04.75.13 1.10-4-.2-7.55-2.12-9.93-5.04-.42.72-.66 1.55-.66 2.44 0 1.67.85 3.14 2.14 4-.79-.03-1.53-.24-2.18-.6v.06c0 2.33 1.66 4.28 3.86 4.72-.4.11-.83.17-1.27.17-.31 0-.62-.03-.91-.08.62 1.94 2.42 3.35 4.55 3.39-1.67 1.31-3.77 2.09-6.05 2.09-.39 0-.78-.02-1.17-.07 2.18 1.4 4.77 2.21 7.55 2.21 9.06 0 14.01-7.5 14.01-14.01 0-.21 0-.42-.02-.63.96-.7 1.8-1.56 2.46-2.55z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="footer-social-link" aria-label="GitHub">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Legal -->
+                <div class="footer-column">
+                    <h4 class="footer-heading">Legal Information</h4>
+                    <ul class="footer-links">
+                        <li><a href="#mentions">Legal Notice</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#cookies">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 GAIAEYE. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="scripts/navigation.js"></script>
+    <script src="scripts/interactions.js"></script>
+</body>
+
+</html>

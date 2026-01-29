@@ -1,0 +1,210 @@
+/* --- Why Us Section Container --- */
+.why-us-section {
+    position: relative;
+    padding: 120px 0;
+    width: 100%;
+    background: linear-gradient(180deg, #FFFFFF 0%, #E6F3FF 100%);
+    overflow: hidden;
+}
+
+.why-us-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+    position: relative;
+}
+
+/* --- Header --- */
+.why-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.why-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: #064E3B;
+    margin-bottom: 20px;
+    padding-bottom: 25px;
+    position: relative;
+    display: inline-block;
+}
+
+/* "Signature" Interactive Line */
+.why-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0px;
+    /* Initial width for animation start (will be animated to 80px via JS or default 80px if no entrance anim? User says 'Largeur initiale: 80px' but then 'S'élargit de 80px à 120px' on hover. AND GSAP Entrance for TITLE ('elastic drop'). */
+    /* Wait, the GSAP entrance describes the TITLE movement.
+       The LINE width Entrance is NOT explicitly described in the new prompt (Step 94),
+       but previous prompt (Step 69) said 'S'étend à 100%'.
+       BUT THIS NEW PROMPT Step 94 overwrites: "Largeur initiale : 80px".
+       So I will set it to 80px base.
+    */
+    width: 80px;
+    height: 4px;
+    background-color: #F1C40F;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.why-title:hover::after {
+    width: 120px;
+}
+
+/* --- Grid System --- */
+.why-grid-v2 {
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr 1px 1fr;
+    gap: 0;
+    align-items: stretch;
+    position: relative;
+}
+
+.vertical-separator {
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, #F1C40F, transparent);
+    opacity: 0.5;
+}
+
+/* --- Why Card --- */
+.why-card {
+    padding: 40px;
+    text-align: center;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    opacity: 0;
+    /* JS Reveal */
+    transform: scale(0.9);
+    /* JS Reveal */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: default;
+}
+
+.why-card:hover {
+    background: #FFFFFF;
+    border-color: rgba(241, 196, 15, 0.3);
+    box-shadow: 0 20px 50px rgba(6, 78, 59, 0.1);
+    transform: translateY(-10px) scale(1) !important;
+    /* Override inline styles if needed, but GSAP usually handles properties cleanly. We'll rely on CSS hover after GSAP sets initial state to natural */
+}
+
+/* --- Icon Wrapper --- */
+.icon-wrapper {
+    width: 100px;
+    height: 100px;
+    background: white;
+    border: 2px solid #E5E5E5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s ease;
+}
+
+.why-card:hover .icon-wrapper {
+    transform: scale(1.1);
+    border-color: #F1C40F;
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
+    /* Blue glow as requested */
+}
+
+.why-icon-svg {
+    width: 40px;
+    height: 40px;
+    color: #10B981;
+    transition: transform 0.4s ease;
+}
+
+/* Specific rotation for 'Growth' icon if applicable (assuming strictly handled via JS class or generic hover) */
+/* Rotation for 'Growth' icon */
+.why-card:hover .why-icon-svg.icon-growth {
+    transform: rotate(-10deg);
+}
+
+/* --- Typography --- */
+.why-card h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #064E3B;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.why-card:hover h3 {
+    color: #10B981;
+}
+
+.why-card p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #4A5568;
+    margin-bottom: 30px;
+}
+
+/* --- Learn More Button --- */
+/* --- Learn More Button --- */
+.learn-more-btn {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #10B981;
+    text-decoration: none;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 25px;
+    border-radius: 30px;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    transition: all 0.3s ease;
+    background-color: transparent;
+}
+
+.learn-more-btn::after {
+    content: '→';
+    display: inline-block;
+    margin-left: 8px;
+    opacity: 0;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+}
+
+.why-card:hover .learn-more-btn {
+    background-color: #10B981;
+    color: #FFFFFF;
+    border-color: #10B981;
+    box-shadow: 0 5px 15px rgba(16, 185, 129, 0.3);
+}
+
+.why-card:hover .learn-more-btn::after {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+    .why-grid-v2 {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .vertical-separator {
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(to right, transparent, #F1C40F, transparent);
+    }
+}

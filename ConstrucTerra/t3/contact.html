@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | TERRA-FOUNDATION</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+
+<body style="background: var(--color-dark);">
+    <nav>
+        <div class="logo">TERRA-FOUNDATION</div>
+        <div class="nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="statistiques.html">Statistiques</a>
+            <a href="packs.html">Packs</a>
+            <a href="pourquoi-nous.html">Pourquoi Nous</a>
+            <a href="projets.html">Projets</a>
+            <a href="contact.html" class="active">Contact</a>
+        </div>
+    </nav>
+
+    <section id="contact" style="padding-top: 150px; color: white;">
+        <h1 class="section-title" style="color: white; border-color: var(--color-primary);">Lancez Votre Dialogue avec
+            la Terre</h1>
+        <p class="intro-text" style="color: rgba(255,255,255,0.7);">
+            Prêt à construire sans peur ? Nous sommes là pour vous guider vers la certitude.
+        </p>
+
+        <div class="problem-grid" style="grid-template-columns: 1.5fr 1fr; gap: 80px; align-items: start;">
+            <!-- Formulaire -->
+            <div
+                style="background: rgba(255,255,255,0.05); padding: 50px; border-radius: 30px; backdrop-filter: blur(10px);">
+                <form id="contact-form" style="display: flex; flex-direction: column; gap: 20px;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <input type="text" placeholder="Nom" required
+                            style="padding: 15px; border-radius: 10px; border: none; background: rgba(255,255,255,0.1); color: white;">
+                        <input type="text" placeholder="Prénom" required
+                            style="padding: 15px; border-radius: 10px; border: none; background: rgba(255,255,255,0.1); color: white;">
+                    </div>
+                    <input type="email" placeholder="Email Professionnel" required
+                        style="padding: 15px; border-radius: 10px; border: none; background: rgba(255,255,255,0.1); color: white;">
+                    <input type="text" placeholder="Société"
+                        style="padding: 15px; border-radius: 10px; border: none; background: rgba(255,255,255,0.1); color: white;">
+                    <select
+                        style="padding: 15px; border-radius: 10px; border: none; background: rgba(255,255,255,0.1); color: #ccc;">
+                        <option value="">Sélectionnez un pack d'intérêt</option>
+                        <option value="basique">Pack Basique</option>
+                        <option value="premium">Pack Premium</option>
+                        <option value="entreprise">Pack Entreprise</option>
+                    </select>
+                    <textarea placeholder="Décrivez votre projet (emplacement, type de sol, budget prévu...)" required
+                        style="padding: 15px; border-radius: 10px; border: none; background: rgba(255,255,255,0.1); color: white; min-height: 150px;"></textarea>
+
+                    <label
+                        style="display: flex; align-items: center; gap: 10px; font-size: 0.9rem; color: rgba(255,255,255,0.6);">
+                        <input type="checkbox" style="width: 20px; height: 20px;">
+                        Je souhaite demander une démonstration interactive personnalisée.
+                    </label>
+
+                    <button class="cta-button"
+                        style="background: var(--color-primary); color: var(--color-dark); margin-top: 10px;">Envoyer le
+                        Message et Révolutionner Mon Projet</button>
+                </form>
+            </div>
+
+            <!-- Équipe & FAQ -->
+            <div>
+                <h3 style="color: var(--color-primary); margin-bottom: 30px;">L'Équipe Fondatrice</h3>
+                <div style="display: flex; flex-direction: column; gap: 30px;">
+                    <div style="display: flex; gap: 20px; align-items: center;">
+                        <div
+                            style="width: 80px; height: 80px; border-radius: 50%; background: var(--color-light-gray); overflow: hidden;">
+                            <img src="https://via.placeholder.com/80?text=Scan" alt="Founder 1">
+                        </div>
+                        <div>
+                            <p style="font-weight: 800; color: var(--color-primary);">Dr. Marc Terra</p>
+                            <p style="font-size: 0.8rem; opacity: 0.7;">Expert en IA & Géologie-Système. Passionné par
+                                le dialogue terre-design.</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 20px; align-items: center;">
+                        <div
+                            style="width: 80px; height: 80px; border-radius: 50%; background: var(--color-light-gray); overflow: hidden;">
+                            <img src="https://via.placeholder.com/80?text=Sat" alt="Founder 2">
+                        </div>
+                        <div>
+                            <p style="font-weight: 800; color: var(--color-primary);">Sophie Horizon</p>
+                            <p style="font-size: 0.8rem; opacity: 0.7;">Ingénieure Analyse Satellite. 15 ans
+                                d'expérience chez l'ESA.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 60px;">
+                    <h3 style="color: var(--color-secondary); margin-bottom: 20px;">FAQ</h3>
+                    <div
+                        style="margin-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px;">
+                        <p style="font-weight: 600;">Combien coûte une analyse ?</p>
+                        <p style="font-size: 0.9rem; opacity: 0.7;">Nos packs commencent à 15 000€ pour une étude
+                            préliminaire complète.</p>
+                    </div>
+                    <div
+                        style="margin-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px;">
+                        <p style="font-weight: 600;">Quel est le délai de livraison ?</p>
+                        <p style="font-size: 0.9rem; opacity: 0.7;">Entre 5 et 15 jours selon la complexité du terrain
+                            et les données disponibles.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer
+        style="background: var(--color-dark); color: white; padding: 40px; text-align: center; border-top: 1px solid rgba(255,255,255,0.1);">
+        <p>&copy; 2026 TERRA-FOUNDATION. La Terre est prête à vous écouter. Êtes-vous prêt ?</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
