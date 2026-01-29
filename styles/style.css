@@ -90,6 +90,20 @@ canvas {
   transition: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
+@media (max-width: 768px) {
+  .gaia-title {
+    font-size: 4rem;
+    top: 20%;
+  }
+}
+
+@media (max-width: 480px) {
+  .gaia-title {
+    font-size: 2.5rem;
+    top: 25%;
+  }
+}
+
 /* Scrolled / Navbar State */
 .gaia-title.nav-state {
   top: 15px !important;
@@ -100,6 +114,14 @@ canvas {
   pointer-events: auto;
   cursor: pointer;
   z-index: 60;
+}
+
+@media (max-width: 480px) {
+  .gaia-title.nav-state {
+    font-size: 1.5rem;
+    left: 20px !important;
+    top: 18px !important;
+  }
 }
 
 /* Navigation Menu */
@@ -418,6 +440,28 @@ canvas {
   letter-spacing: normal;
   width: 0;
   /* Start hidden */
+}
+
+@media (max-width: 768px) {
+  .typewriter-line {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .typewriter-line {
+    font-size: 1.2rem;
+    white-space: normal;
+    width: 100% !important;
+    opacity: 0;
+    line-height: 1.4;
+  }
+
+  .typewriter-line.typing-active,
+  .typewriter-line.typing-done {
+    opacity: 1;
+    width: 100% !important;
+  }
 }
 
 /* Different widths for lines to make animation timing feel right? 
